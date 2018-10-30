@@ -24,4 +24,10 @@ Search Blue Ocean and install :
   
 ## Return on jenkins home
 
-  New Item > Multibranch Pipeline
+  New Item > Pipeline
+  
+	Pipeline
+	► Definition = Pipeline Script From SCM
+	► SCM = GIT
+	► Repository URL = https://github.com/DrChopi/Arma_Sheep_Server.git
+	► Script Path = <Server Version>/Jenkinsfile
