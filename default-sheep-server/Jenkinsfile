@@ -5,8 +5,22 @@ pipeline {
         stage('Getting configuration files...') {
             steps {
 		sh 'pwd'
-		sh 'rm -rf default-arma-server'
-		sh 'git clone'
+		sh 'rm -rf Arma_Sheep_Server'
+		sh 'git clone https://github.com/DrChopi/Arma_Sheep_Server.git'
+	    }
+	}
+
+	stage("Deploying server container's") {
+	    steps {
+	        sh 'docker run --tty -d --interactive -v default-sheep-log.txt:/root/nohup.out --name default_sheep_server -p 2302:2302 arma_sheep_server/default-sheep-server'
+		echo "Container successfully started !!"
+	    }
+	}
+
+	stage("Starting server...") {
+	    steps {
+		sh 'docker exec default_sheep_server nohup /opt/arma3/arma3server -port=2302 -config=./Arma_Sheep_Server/default-sheep-server/server.cfg -cfg=./Arma_Sheep_Server/default-sheep-server/basic.cfg -name=default-sheep-server & jobs'
+	        echo "Server successfully started try to connect !!"
 	    }
 	}
     }

@@ -8,4 +8,5 @@ apt-get install -y docker docker-ce
 cd $(find / | grep Arma_Sheep_Server)
 docker build --tag arma_sheep_server/jenkins --file jenkins.dockerfile .
 docker build --tag arma_sheep_server/steam --file steam.dockerfile .
+docker build --tag arma_sheep_server/baser-sheep-server --file arma3.dockerfile .
 docker-compose --file docker-compose.yaml up --remove-orphans > log.txt & jobs
