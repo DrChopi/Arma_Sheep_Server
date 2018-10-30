@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Getting configuration files...') {
+            steps {
+		sh 'pwd'
+		sh 'rm -rf default-arma-server'
+		sh 'git clone'
+	    }
+	}
+    }
+}
