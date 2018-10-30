@@ -15,13 +15,12 @@
 
  Go to Administration > Plug-in
  Search Blue Ocean and install :
-  Blue Ocean
-  Blue Ocean Core JS
-  Blue Ocean Pipeline Editor
-  Dashboard for Blue Ocean
-  Git Pipeline for Blue Ocean
+   Blue Ocean
+   Blue Ocean Core JS
+   Blue Ocean Pipeline Editor
+   Dashboard for Blue Ocean
+   Git Pipeline for Blue Ocean
   
 ## Return on jenkins home
 
- New Item
- Multibranch Pipeline
+  New Item > Multibranch Pipeline
