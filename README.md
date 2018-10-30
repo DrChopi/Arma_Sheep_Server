@@ -31,3 +31,8 @@ Search Blue Ocean and install :
 	► SCM = GIT
 	► Repository URL = https://github.com/DrChopi/Arma_Sheep_Server.git
 	► Script Path = <Server Version>/Jenkinsfile
+
+## Server versions
+	
+	► default-sheep-server
+	► ace-sheep-server
